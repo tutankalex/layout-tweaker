@@ -1,0 +1,68 @@
+{
+  "name": "layout-tweaker",
+  "main": "./lib/layout-tweaker",
+  "version": "0.0.1",
+  "description": "foobar",
+  "keywords": [],
+  "COMMENT OUT repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/zz/yy.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.57.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "deserializers": {
+    "LayoutTweakerManager": "deserialize_LT_stuff"
+  },
+  "dependencies": {
+    "async": "3.2.2",
+    "atom-select-list": "^0.7.0",
+    "etch": "^0.14.1",
+    "fs-plus": "^3.0.0",
+    "fuzzaldrin": "^2.0",
+    "fuzzaldrin-plus": "^0.6.0",
+    "gridstack": "^10.3.1",
+    "humanize-plus": "~1.8.2",
+    "minimatch": "~3.0.5",
+    "object-hash": "^1.3.1",
+    "scroll-into-view": "^1.16.0",
+    "temp": "^0.8.4",
+    "underscore-plus": "^1.7.0",
+    "vscode-ripgrep": "^1.13.2",
+    "wrench": "^1.5"
+  },
+  "configSchema": {
+    "metrics_preference": {
+      "title": "Metrics reporting preference",
+      "order": 10,
+      "description": "Help improve CodeRibbon and contribute to academic usability research by enabling completely anonymous and non-identifiable usage reporting!",
+      "type": "string",
+      "default": "disabled",
+      "enum": [
+        {
+          "value": "disabled",
+          "description": "Disabled - entire metrics system is disabled."
+        },
+        {
+          "value": "remote",
+          "description": "Not yet implemented: Send metrics events directly to the official CodeRibbon metrics analysis server."
+        },
+        {
+          "value": "local",
+          "description": "Store metrics events in RAM, which can then be exported to file for later analysis."
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}

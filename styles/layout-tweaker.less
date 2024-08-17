@@ -1,0 +1,44 @@
+// looks like this file is auto-loaded by atom
+//
+//
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+
+@active-highlight-color: rgba(255, 130, 0, 0.4);
+@hover-highlight-color: rgba(185, 225, 226, 0.4);
+
+
+* {
+  color: brown;
+}
+
+atom-pane-container {
+  background: lime;
+}
+
+
+// import gridstack css
+@import (inline) "../node_modules/gridstack/dist/gridstack.min.css";
+
+
+// grid stack
+.grid-stack {
+  // zoom: 50%;
+  background: pink;
+  width: 50%;
+  height: 50;
+  opacity: 0.5;
+  // position: absolute;
+}
+
+.grid-stack-item {
+  background: lightblue;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 2em;
+  cursor: move;
+}
